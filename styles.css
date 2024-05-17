@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('hills-background.jpg');
+    background-size: cover;
+}
+
+h1 {
+    color: #fff;
+}
+
+#gameArea {
+    margin-top: 20px;
+    position: relative;
+    width: 700px;
+    height: 700px;
+    overflow: hidden; /* Ensure Kukis don't go outside the game area */
+    margin: 0 auto; /* Center the game area horizontally */
+}
+
+#kukis {
+    position: relative;
+}
+
+.kuki {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    position: absolute;
+    cursor: url('dogo.png'), auto; /* Change cursor to dogo image */
+}
+
+.kuki.cross {
+    background-image: url('cross.png') !important; /* Override background image */
+}
+
+#startButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#startButton:hover {
+    background-color: #0056b3;
+}
+
+#timeLeft {
+    font-size: 24px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+#confettiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through to the game area */
+}
+
+#celebrationImages {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.celebrationImage {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin: 10px;
+}
